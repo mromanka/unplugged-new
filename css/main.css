@@ -90,13 +90,15 @@ textarea {
 .content-wrapper {
   outline: 3px dotted red;
   width: 90%;
-}
+  margin: 50px 0;
+} /* This is at the top as it is the default for all the sections, but it's possible to ovewrite these styles below */
 
   /* -------------------------------- Base Header - Footer Styles ------------------------------------ */
 
 header {
   display: flex;
   justify-content: center;
+  padding: 15px 0;
 }
 
 header .content-wrapper {
@@ -104,18 +106,47 @@ header .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 0;
+} /* margin is 0 because the header padding is 15px and not 50px as for all other content-wrappers set above*/
+
+.header-divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 20px 0;
+}
+
+header nav {
+  width: 60%;
 }
 
 header nav ul {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 } /* Make header nav ul a flex parent so that nav list items can be positioned */
+  /* Width is 100% of the 60% width of header nav which is the parent */
 
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+footer .content-wrapper {
+  width: 55%;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .contact {
+  margin-bottom: 50px;
+}
+
+footer .footer-content h4 {
+  margin: 20px 0;
 }
 
 footer .social-icons {
@@ -130,9 +161,15 @@ footer .social-icons p {
   align-items: center;
 }
 
+footer .copyright {
+  margin: 20px 0;
+}
+
 /* -------------------------------- MOBILE STYLES ---------------------------------- */
 
-/* ==================== Homepage ========================== */
+/* ================================================
+   Homepage
+   ================================================ */
 
 /* Hero Area */
 
@@ -155,11 +192,24 @@ aside {
   justify-content: center;
 }
 
+.features h2 {
+  margin-bottom: 60px;
+}
+
+.features article {
+  width: 63%;
+  margin: 30px 0;
+} /* Determine width by comparing text using inspector tool - how many words fit per line compared to the design comp */
+
 .features .features-items {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-flow: row wrap;
+}
+
+.features p {
+  margin: 0;
 }
 
 /* Reviews */
@@ -169,7 +219,13 @@ aside {
   justify-content: center;
 }
 
-/* ==================== About Page ======================== */
+.reviews h3 {
+  width: 55%;
+}
+
+/* ================================================
+   About Page
+   ================================================ */
 
 /* Mission */
 
@@ -183,7 +239,13 @@ aside {
   justify-content: center;
 }
 
-/* ==================== FAQ Page ========================== */
+.contact-content {
+  margin: 0;
+}
+
+/* ================================================
+   FAQ page
+   ================================================ */
 
 .faq {
   display: flex;
@@ -195,6 +257,16 @@ aside {
   justify-content: center;
   align-items: flex-start;
   flex-flow: row wrap;
+  margin: 50px 0 0 0;
+}
+
+.faq h2 {
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+.faq-content {
+  margin-bottom
 }
 
 /* ==========================================================================
