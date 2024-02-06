@@ -96,34 +96,33 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  color: #e2e3ed;
+  text-align: left;
 }
 
 ul,
 ol {
   list-style-type: none;
-}
+  margin: 0;
+  padding: 0;
+} /* to eliminated browser specific default margin or padding */
 
 a {
   color: #e2e3ed;
   text-decoration: none;
 } /* This styles the links, text-decoration: none means the link isn't underlined */
 
-h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.25em;
-  line-height: 2.688em;
-  font-weight: 500;
-}
-
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
+  font-weight: 500;
 }
 
 h3,
 h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.125em;
+  font-weight: 500;
   margin: 20px 0;
 }
 
@@ -145,7 +144,6 @@ address {
 }
 
 .content-wrapper {
-  outline: 3px dotted red;
   width: 90%;
   margin: 50px 0;
 } /* This is at the top as it is the default for all the sections, but it's possible to ovewrite these styles below */
@@ -156,6 +154,7 @@ header {
   display: flex;
   justify-content: center;
   padding: 15px 0;
+  background-color: #202322;
 }
 
 header .content-wrapper {
@@ -170,10 +169,14 @@ header .content-wrapper {
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
+  background: #3a3a3a;
 }
 
 header nav {
   width: 60%;
+  font-size: 1.125em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 header nav ul {
@@ -183,11 +186,16 @@ header nav ul {
 } /* Make header nav ul a flex parent so that nav list items can be positioned */
   /* Width is 100% of the 60% width of header nav which is the parent */
 
+header nav ul li {
+  font-size: 1.125em;
+}
+
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #202322;
 }
 
 footer .content-wrapper {
@@ -235,11 +243,46 @@ footer .copyright {
   justify-content: center;
 }
 
+.hero-area h1 {
+  font-size: 2.25em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 /* Aside */
 
 aside {
   display: flex;
   justify-content: center;
+  background-color: #527158;
+}
+
+aside .form {
+  margin-top: 30px;
+}
+ 
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  font-weight: 500;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Features */
@@ -267,6 +310,7 @@ aside {
 
 .features p {
   margin: 0;
+  text-align: center;
 }
 
 /* Reviews */
@@ -274,10 +318,17 @@ aside {
 .reviews {
   display: flex;
   justify-content: center;
+  background-color: #2a423a;
+}
+
+.reviews h2 {
+  line-height: 1em;
+  margin-bottom: 40px;
 }
 
 .reviews h3 {
   width: 55%;
+  margin: 20px 0;
 }
 
 /* ================================================
@@ -289,11 +340,13 @@ aside {
 .mission {
   display: flex;
   justify-content: center;
+  background-color: #527158;
 }
 
 .contact-section {
   display: flex;
   justify-content: center;
+  background-color: #2a423a;
 }
 
 .contact-content {
@@ -307,6 +360,7 @@ aside {
 .faq {
   display: flex;
   justify-content: center;
+  background-color: #527158;
 }
 
 .faq .content-wrapper {
@@ -318,12 +372,16 @@ aside {
 }
 
 .faq h2 {
-  width: 80%;
-  margin-bottom: 40px;
+  margin: 0 0 40px 0;
+  line-height: 1em;
+}
+
+.faq-content h4 {
+  line-height: 1.5em;
 }
 
 .faq-content {
-  margin-bottom: 0;
+  margin-bottom: 50px;
 }
 
 /* ==========================================================================
