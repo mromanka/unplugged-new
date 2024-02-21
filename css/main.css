@@ -560,6 +560,11 @@ input[type=button] {
     line-height: 1.285em;
   }
 
+  footer .social-icons {
+    width: 12.5em;
+    justify-content: space-between;
+  }
+
   footer .copyright {
     width: 100%;
   }
